@@ -17,7 +17,7 @@ testWebP(function (support) {
 let burger = document.querySelector(".burger");
 let headNav = document.querySelector(".nav-header");
 let body = document.querySelector("body");
-let navLink = document.querySelector(".nav-header__link");
+let navLinks = document.querySelectorAll(".nav-header__link");
 
 burger.addEventListener("click", function() {
 	burger.classList.toggle("active");
@@ -31,11 +31,16 @@ burger.addEventListener("click", function() {
 	}
 });
 
-navLink.addEventListener("click", function() {
-	burger.classList.remove("active");
-	headNav.classList.remove("active");
-	body.classList.remove("lock");
-});;
+for (let i = 0; i < navLinks.length; i++) {
+	 let navLink = navLinks[i];
+	 
+	navLink.addEventListener("click", function() {
+		burger.classList.remove("active");
+		headNav.classList.remove("active");
+		body.classList.remove("lock");
+	});
+}
+;
 // Dynamic Adapt v.1
 // HTML data-da="where(uniq class name),when(breakpoint),position(digi),type (min, max)"
 // e.x. data-da="item,767,last,max"
