@@ -22,7 +22,7 @@ let navLinks = document.querySelectorAll(".nav-header__link");
 burger.addEventListener("click", function() {
 	burger.classList.toggle("active");
 
-	if(burger.classList.contains("active")) {
+	if (burger.classList.contains("active")) {
 		headNav.classList.add("active");
 		body.classList.add("lock");
 	} else {
@@ -33,7 +33,7 @@ burger.addEventListener("click", function() {
 
 for (let i = 0; i < navLinks.length; i++) {
 	 let navLink = navLinks[i];
-	 
+
 	navLink.addEventListener("click", function() {
 		burger.classList.remove("active");
 		headNav.classList.remove("active");
