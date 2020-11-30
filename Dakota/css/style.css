@@ -230,6 +230,7 @@ body.lock {
 .intro {
   position: relative;
   min-height: 100vh;
+  padding: 140px 0 0 0;
   background: #2b2d5c;
 }
 
@@ -264,7 +265,7 @@ body.lock {
 .intro__body {
   position: relative;
   z-index: 2;
-  padding: 140px 0 40px 0;
+  padding: 0 0 40px 0;
 }
 
 .intro__decor {
@@ -660,19 +661,11 @@ body.lock {
   }
 }
 
-@media (max-width: 1023px) {
-  .intro__body {
-    padding: 100px 0 20px 0;
-  }
-}
-
-@media (max-width: 767px), (max-height: 700px) {
-  .intro__social {
-    background: none;
-  }
-}
-
 @media (max-width: 767px) {
+  .intro {
+    padding: 80px 0 0 0;
+  }
+
   .intro__social {
     display: none;
   }
@@ -681,12 +674,8 @@ body.lock {
     margin-right: 15px;
   }
 
-  .intro__body {
-    padding: 80px 0 20px 0;
-  }
-
   .intro__btn {
-    margin: 20px 0;
+    margin: 30px 0;
   }
 
   .header__container {
@@ -751,6 +740,12 @@ body.lock {
   }
 }
 
+@media (max-width: 767px), (max-height: 700px) {
+  .intro__social {
+    background: none;
+  }
+}
+
 @media (max-width: 767px), (max-height: 767px) {
   .intro__decor {
     display: none;
@@ -764,6 +759,10 @@ body.lock {
 }
 
 @media (max-width: 425px) {
+  .intro {
+    padding: 50px 0 0 0;
+  }
+
   .header__container {
     min-height: 50px;
   }
