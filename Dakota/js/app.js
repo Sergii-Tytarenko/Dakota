@@ -11,6 +11,30 @@ testWebP(function (support) {
 	} else {
 		document.querySelector('body').classList.add('_no-webp');
 	}
+});
+
+// Burger Nav
+let burger = document.querySelector(".burger");
+let headNav = document.querySelector(".nav-header");
+let body = document.querySelector("body");
+let navLink = document.querySelector(".nav-header__link");
+
+burger.addEventListener("click", function() {
+	burger.classList.toggle("active");
+
+	if(burger.classList.contains("active")) {
+		headNav.classList.add("active");
+		body.classList.add("lock");
+	} else {
+		headNav.classList.remove("active");
+		body.classList.remove("lock");
+	}
+});
+
+navLink.addEventListener("click", function() {
+	burger.classList.remove("active");
+	headNav.classList.remove("active");
+	body.classList.remove("lock");
 });;
 // Dynamic Adapt v.1
 // HTML data-da="where(uniq class name),when(breakpoint),position(digi),type (min, max)"
