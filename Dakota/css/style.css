@@ -514,6 +514,10 @@ body.lock {
   margin: 0;
 }
 
+.nav-header__list .social__list {
+  margin-top: 20px;
+}
+
 .nav-header__link {
   position: relative;
   display: inline-block;
@@ -663,7 +667,7 @@ body.lock {
 
 @media (max-width: 767px) {
   .intro {
-    padding: 80px 0 0 0;
+    padding: 100px 0 0 0;
   }
 
   .intro__social {
@@ -706,7 +710,7 @@ body.lock {
             align-items: center;
     width: 300px;
     height: 100%;
-    padding: 100px 0 30px;
+    padding: 80px 0 50px;
     background: rgba(45, 52, 67, 0.98);
     -webkit-transition: all .6s;
     -o-transition: all .6s;
