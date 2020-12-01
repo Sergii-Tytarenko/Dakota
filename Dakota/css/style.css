@@ -190,6 +190,20 @@ body.lock {
      object-position: center;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -863,6 +877,143 @@ body.lock {
   display: block;
 }
 
+/* Work
+========================================== */
+
+._no-webp .work {
+  background: #2b2d5c url("../img/feedback/Fk-bg.png") center/cover no-repeat; }
+
+.work {
+  position: relative;
+  padding: 60px 0 70px;
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+
+.work:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1235px;
+  height: 100%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  background: url("../img/feedback/fk-decor1.svg"), url("../img/feedback/fk-decor2.svg");
+  background-position: left bottom, right top 60px;
+  background-repeat: no-repeat;
+}
+
+.work__container {
+  position: relative;
+  z-index: 1;
+}
+
+.work__title {
+  margin: 0 0 30px 0;
+  color: #fff;
+  font-family: Trirong;
+  font-size: 40px;
+  line-height: 38px;
+  text-align: center;
+}
+
+.work__form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form__group {
+  margin-bottom: 25px;
+}
+
+.form__group:last-child {
+  margin: 0;
+  text-align: center;
+}
+
+.form__input {
+  height: 45px;
+  padding: 0 30px;
+}
+
+.form__text {
+  min-height: 90px;
+  padding: 20px 30px;
+  resize: none;
+  background-color: #b6b7c7;
+}
+
+.form__input,
+.form__text {
+  width: 100%;
+  color: #2b2d5c;
+  font-family: Muli;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: #b6b7c7;
+}
+
+.form__input::-webkit-input-placeholder, .form__text::-webkit-input-placeholder {
+  color: #2b2d5c;
+  font-family: Muli;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.form__input::-moz-placeholder, .form__text::-moz-placeholder {
+  color: #2b2d5c;
+  font-family: Muli;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.form__input:-ms-input-placeholder, .form__text:-ms-input-placeholder {
+  color: #2b2d5c;
+  font-family: Muli;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.form__input::-ms-input-placeholder, .form__text::-ms-input-placeholder {
+  color: #2b2d5c;
+  font-family: Muli;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.form__input::placeholder,
+.form__text::placeholder {
+  color: #2b2d5c;
+  font-family: Muli;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.form__input:focus::-webkit-input-placeholder, .form__input:focus::-webkit-input-placeholder, .form__text:focus::-webkit-input-placeholder, .form__text:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form__input:focus::-moz-placeholder, .form__input:focus::-moz-placeholder, .form__text:focus::-moz-placeholder, .form__text:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.form__input:focus:-ms-input-placeholder, .form__input:focus:-ms-input-placeholder, .form__text:focus:-ms-input-placeholder, .form__text:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form__input:focus::-ms-input-placeholder, .form__input:focus::-ms-input-placeholder, .form__text:focus::-ms-input-placeholder, .form__text:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form__input:focus::placeholder,
+.form__input:focus::placeholder,
+.form__text:focus::placeholder,
+.form__text:focus::placeholder {
+  color: transparent;
+}
+
 @media (min-width: 767px) {
   .btn:hover,
   .btn:focus {
@@ -932,6 +1083,14 @@ body.lock {
 
   .footer__top {
     padding-top: calc(40px + 45 * ((100vw - 320px) / 880));
+  }
+
+  .work {
+    padding-top: calc(35px + 25 * ((100vw - 320px) / 880));
+  }
+
+  .work {
+    padding-bottom: calc(35px + 35 * ((100vw - 320px) / 880));
   }
 }
 
@@ -1138,3 +1297,5 @@ body.lock {
     min-height: 50px;
   }
 }
+
+._webp .work { background: #2b2d5c url(../img/feedback/Fk-bg.webp) center/cover no-repeat; }
