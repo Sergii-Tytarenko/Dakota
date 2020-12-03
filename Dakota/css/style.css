@@ -1153,6 +1153,53 @@ body.lock {
      object-position: top;
 }
 
+/* Clients
+========================================== */
+
+._no-webp .clients {
+  background: #2c2e59 url("../img/clients/clients-bg.png") center/cover no-repeat; }
+
+.clients {
+  padding: 70px 0 75px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.clients__title {
+  margin: 0 0 50px 0;
+  color: #fff;
+  font-size: 40px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.clients__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.clients__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 195px;
+          flex: 0 0 195px;
+  margin: 0 0 25px 0;
+}
+
+.clients__name img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 @media (min-width: 767px) {
   .btn:hover,
   .btn:focus {
@@ -1259,6 +1306,20 @@ body.lock {
 
   .about {
     padding-bottom: calc(40px + 60 * ((100vw - 320px) / 880));
+  }
+
+  .clients {
+    padding-top: calc(40px + 30 * ((100vw - 320px) / 880));
+  }
+
+  .clients {
+    padding-bottom: calc(35px + 35 * ((100vw - 320px) / 880));
+  }
+
+  .clients__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333%;
+            flex: 0 0 33.333%;
   }
 }
 
@@ -1485,6 +1546,14 @@ body.lock {
   }
 }
 
+@media (max-width: 610px) {
+  .clients__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+}
+
 @media (max-width: 590px) {
   .about__row {
     -webkit-box-orient: vertical;
@@ -1547,6 +1616,14 @@ body.lock {
   }
 }
 
+@media (max-width: 460px) {
+  .clients__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
 @media (max-width: 425px) {
   .header__container {
     min-height: 50px;
@@ -1554,3 +1631,5 @@ body.lock {
 }
 
 ._webp .work { background: #2b2d5c url(../img/feedback/Fk-bg.webp) center/cover no-repeat; }
+
+._webp .clients { background: #2c2e59 url(../img/clients/clients-bg.webp) center/cover no-repeat; }
