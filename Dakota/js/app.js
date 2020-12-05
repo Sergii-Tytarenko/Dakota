@@ -40,7 +40,40 @@ for (let i = 0; i < navLinks.length; i++) {
 		body.classList.remove("lock");
 	});
 }
-;
+
+//Smoth scroll
+const smoothLinks = document.querySelectorAll('._smooth');
+
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('href');
+
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+};
+
+//Header scroll 
+let intro = document.querySelector('.intro');
+let introHeight = intro.offsetHeight;
+
+window.addEventListener('scroll', scroll_scroll);
+function scroll_scroll() {
+	let headerNav = document.querySelector('nav__header');
+	let src_value = pageYOffset;
+	let header = document.querySelector('header.header');
+
+	if (header !== null) {
+		if (src_value > introHeight) {
+			header.classList.add('_scroll');
+		} else {
+			header.classList.remove('_scroll');
+		}
+	}
+};
 // Dynamic Adapt v.1
 // HTML data-da="where(uniq class name),when(breakpoint),position(digi),type (min, max)"
 // e.x. data-da="item,767,last,max"

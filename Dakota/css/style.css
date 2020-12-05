@@ -495,7 +495,7 @@ body.lock {
   display: none;
   width: 100%;
   height: 100%;
-  background-color: #2b2d5c;
+  background-color: #24264e;
 }
 
 .header__container {
@@ -509,6 +509,38 @@ body.lock {
       -ms-flex-align: end;
           align-items: flex-end;
   min-height: 95px;
+}
+
+.header__logo {
+  z-index: 2;
+}
+
+.header._scroll:after {
+  display: block;
+}
+
+.header._scroll .header__nav {
+  padding-top: 90px;
+}
+
+@-webkit-keyframes headscr {
+  0% {
+    top: -100%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes headscr {
+  0% {
+    top: -100%;
+  }
+
+  100% {
+    top: 0;
+  }
 }
 
 .logo span {
@@ -577,6 +609,7 @@ body.lock {
 
 .burger {
   position: relative;
+  z-index: 2;
   display: none;
   width: 25px;
   height: 16px;
@@ -1078,9 +1111,10 @@ body.lock {
   z-index: 1;
   width: 100%;
   height: 100%;
-  background-image: url("../img/about/decor-photo.svg"), url("../img/about/decor-photo1.svg");
+  background-image: url("../img/about/decor-photo1.svg");
   background-repeat: no-repeat;
-  background-position: center bottom 53px, top right;
+  background-position: top right;
+  background-size: 25%;
 }
 
 .about__text {
@@ -1629,6 +1663,12 @@ body.lock {
   transition: opacity .3s;
 }
 
+@media (min-width: 426px) {
+  .header._scroll .header__nav {
+    padding-top: 120px;
+  }
+}
+
 @media (min-width: 767px) {
   .btn:hover,
   .btn:focus {
@@ -2079,6 +2119,18 @@ body.lock {
     line-height: 18px;
   }
 
+  .header._scroll {
+    position: fixed;
+    -webkit-animation-name: headscr;
+            animation-name: headscr;
+    -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+  }
+
   .nav-header {
     position: fixed;
     top: 0;
@@ -2095,7 +2147,7 @@ body.lock {
             align-items: center;
     width: 300px;
     height: 100%;
-    padding: 30px 0 50px;
+    padding: 70px 0 50px;
     background: rgba(45, 52, 67, 0.98);
     -webkit-transition: all .6s;
     -o-transition: all .6s;
