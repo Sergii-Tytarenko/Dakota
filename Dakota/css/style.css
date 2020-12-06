@@ -1363,6 +1363,7 @@ body.lock {
 
 .sampls__item {
   position: relative;
+  display: block;
   cursor: pointer;
 }
 
